@@ -6,7 +6,8 @@ function TodoForm({ onSubmit }) {
     if (!todoInput.value) {
       return;
     }
-    onSubmit(todoInput);
+    onSubmit(todoInput.value);
+    todoInput.value = "";
   }
   return (
     <form onSubmit={handleSubmit} autoComplete="off" className="mb-5">
